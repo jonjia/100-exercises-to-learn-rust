@@ -1,7 +1,7 @@
-// TODO: Flesh out the `WeekTemperatures` struct and its method implementations to pass the tests.
+// Flesh out the `WeekTemperatures` struct and its method implementations to pass the tests.
 
 pub struct WeekTemperatures {
-    // TODO
+    value: [Option<i32>; 7],
 }
 
 pub enum Weekday {
@@ -16,15 +16,15 @@ pub enum Weekday {
 
 impl WeekTemperatures {
     pub fn new() -> Self {
-        todo!()
+        WeekTemperatures { value: [None; 7] }
     }
 
     pub fn get_temperature(&self, day: Weekday) -> Option<i32> {
-        todo!()
+        self.value[day as usize]
     }
 
     pub fn set_temperature(&mut self, day: Weekday, temperature: i32) {
-        todo!()
+        self.value[day as usize] = Some(temperature);
     }
 }
 
